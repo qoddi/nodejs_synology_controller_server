@@ -1,0 +1,47 @@
+{  
+ 
+  "name": "nodejs_synology_controller_server",  
+
+  "version": "1.0.0",  
+ 
+  "description": "using post request to control ur synology devices ",  
+ 
+  "main": "web.js",  
+。  
+  "scripts": {  
+    "start": "node web.js"  
+  },  
+
+  "repository": {  
+    "type": "git",  
+    "url": "git+https://github.com/qoddi/nodejs_synology_controller_server.git"  
+  },  
+
+  "author": "qoddi",  
+ 
+  "license": "BSD3",  
+ 
+  "engines": {  
+      "node": "8.9.3"  
+  },  
+  "bugs": {  
+      "url": "https://github.com/qoddi/nodejs_synology_controller_server/issues"  
+  },  
+
+  "keywords": [  
+  "nodejs","synology"  
+  ],  
+  
+
+  "devDependencies": {  
+ 
+  },  
+ 
+  "dependencies": {  
+      "express": "latest",   
+      "https": "latest",  
+      "http": "latest",  
+      "body-parser": "latest",  
+      "polling-to-event": "latest"  
+  }  
+}  

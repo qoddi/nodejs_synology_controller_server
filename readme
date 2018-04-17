@@ -1,0 +1,38 @@
+①在/res/config.json中添加ip(可以是域名)，mac地址（远程唤醒），dsm端口，secure(决定是否使用https),token(用作post身份校验)，sever_port(用作post服务器的端口)
+        {
+            "accessory": "Synology",
+            "name": "Diskstation",
+            "ip": "127.0.0.1",
+            "mac": "00:11:32:ff:ff:ff",
+            "port": "5001",
+            "secure": true,
+            "account": "user",
+            "password": "pass",
+            "version": 6,
+            "doPolling": true,
+            "pollingInterval": 3600,
+			"server_port":2333,
+			"token":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+			
+        }
+②在/ssl中添加你的privkey.pem  cert.pem证书
+		
+		
+③运行方式node web.js开启服务器，尝试
+a.向服务器post请求https://urdomain/synology/getInfo ,请求格式为json，其中body中包含你的token即
+{"token":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}，运行成功返回
+{
+    "result": "true",
+    "power": true,                  //电源状态
+    "drive": 9,                     //磁盘百分比
+    "cpuload": 2,                   //cpu占用
+    "temp": 22                      //温度
+}
+若token错误返回
+{
+    "result": "false",
+    "msg": "permission defined"
+}
+
+b.服务器post请求https://urdomain/synology/powerActivity，请求格式同上，智能判断电源状态，并执行开机或关机，仅返回执行命令与否不返回执行后机器状态
+{"result": "true"}

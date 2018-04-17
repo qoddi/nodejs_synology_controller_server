@@ -1,0 +1,17 @@
+
+        {
+            "accessory": "Synology",
+            "name": "Diskstation",
+            "ip": "127.0.0.1",
+            "mac": "00:11:32:ff:ff:ff",
+            "port": "5001",
+            "secure": true,
+            "account": "user",
+            "password": "pass",
+            "version": 6,
+            "doPolling": true,
+            "pollingInterval": 3600,
+			"server_port":2333,
+			"token":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+			
+        }
